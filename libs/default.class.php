@@ -156,7 +156,7 @@ class StartUp {
 	###
 	function editPaste($uniqueid,$title,$date,$lang,$paste){
 		global $db;
-		$date = $this->makeTimestamp($date);
+		$date = strtotime($date);
 		$query = "UPDATE ".$this->prefix_db."pastes SET 
 						title='".mysql_real_escape_string($title)."',
 						lang='$lang',
@@ -490,14 +490,6 @@ class StartUp {
 	  return $items;	  
 	 }
 	 else return false;	  
-	}
-	###
-	function makeTimestamp($date){
-		$date = str_replace(array(' ', ':'), '-', $date);
-		$c    = explode('-', $date);
-		$c    = array_pad($c, 6, 0);
-		array_walk($c, 'intval'); 
-	return mktime($c[3], $c[4], $c[5], $c[1], $c[2], $c[0]);
 	}
 	###	
 	function addFooter(){
