@@ -92,4 +92,5 @@ $lang["adminsettings"]="параметры администратора";
 $lang["adminusers"]="управление пользователями";
 $lang["adminpastes"]="Управление пасты";
 $lang["adminplugins"]="Управление плагинами";
+$lang["adminthemes"]="Управление темами";
 

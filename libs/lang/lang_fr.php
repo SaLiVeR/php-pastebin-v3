@@ -93,5 +93,6 @@ $lang["adminsettings"]="Paramètres du site";
 $lang["adminusers"]="Gestion utilisateurs";
 $lang["adminpastes"]="Gestion pastes";
 $lang["adminplugins"]="Gestion des plugins";
+$lang["adminthemes"]="Gestion des themes";
 
 

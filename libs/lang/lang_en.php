@@ -94,5 +94,5 @@ $lang["adminsettings"]="Admin settings";
 $lang["adminusers"]="Users management";
 $lang["adminpastes"]="Pastes management";
 $lang["adminplugins"]="Plugins management";
-
+$lang["adminthemes"]="Themes setting";
 

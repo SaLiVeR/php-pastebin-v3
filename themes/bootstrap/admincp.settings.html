@@ -51,17 +51,6 @@
 			</div>
 
 			<div class="control-group">
-			<label class="control-label" for="theme">Default theme</label>
-				<div class="controls">
-                                   	<select name="theme" id="theme" class="uniform" data-placement="right" rel="tooltip" data-original-title="Select your default theme">
-                                         {foreach from=$getThemes key=k item=v} 
-                                         <option value="{$v}" {if $getConfigs.theme eq $v}selected="selected"{/if}>{$v}</option>
-                                         {/foreach}
-                               		</select>
-				</div>
-			</div>
-
-			<div class="control-group">
 			<label class="control-label" for="metad">Meta description</label>
 				<div class="controls">
 					<textarea data-placement="right" rel="tooltip" data-original-title="Your meta description" name="metad" class="st-forminput" id="metad" style="width:510px" rows="3" cols="47">{$getConfigs.metad}</textarea> 
