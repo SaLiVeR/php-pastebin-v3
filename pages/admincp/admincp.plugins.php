@@ -33,11 +33,13 @@ if (!empty($sub)) {
 		if($where === 'filename')
 		$sql .= " WHERE filename = '$value' ";
 		$items = $db->get_results($sql);
- 
+		
+ 		if(is_array($items) && @count($items) > 0){
 		foreach ( $items as $obj ){
         		$array[$obj->filename]['filename'] = $obj->filename;
         		$array[$obj->filename]['action'] = $obj->action;
 	        }
+	    }    
  
 		return $array;
 	}
@@ -71,9 +73,12 @@ $plugin_headers = $plugin_list->get_plugins_header();
 $api=array();
 $i=0;
 
+if(is_array($plugin_headers) && @count($plugin_headers) > 0){
  
   foreach ($plugin_headers as $tid=>$plugin_header) { 
-			$action = false;		
+			$action = false;	
+	if(is_array(getPlugins()) && @count(getPlugins()) > 0){
+				
 	foreach ( getPlugins() as $result_row )  
 		if ($plugin_header['filename'] == $result_row['filename'] && $result_row['action'] == 1)
 			$action = true;
@@ -98,6 +103,8 @@ $i=0;
    
   $i++;   
   } 
+ }
+}
 $smarty->assign("api",$api);  
  }
  
