@@ -69,7 +69,7 @@ $hook->add_side_block('defaultSidebar','','', 3);
 // Javascript hook
 $hook->addJs('Jquery','http://code.jquery.com/jquery-latest.min.js','','1');
 // Css hook
-$hook->addCss('Style','style.css','themes/'.$conf['theme'].'/style/','1');
+$hook->addCss('Style','style.css',$conf['baseurl'].'themes/'.$conf['theme'].'/style/','1');
 // Main menu hook
 $hook->addMenu('addPaste',$lang["newPaste"], 'add.html', 'newpost.png', '3');
 $hook->addMenu('viewAllpastes',$lang["viewPastes"], 'last-pastes.html', 'dashboard.png', '4');
